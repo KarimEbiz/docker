@@ -1,0 +1,9 @@
+FROM mysql_on_debian
+
+ENV TOMCAT_MAJOR 8
+ENV TOMCAT_VERSION 8.5.14
+
+
+
+
+
