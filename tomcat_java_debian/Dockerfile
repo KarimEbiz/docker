@@ -14,4 +14,6 @@ RUN groupadd tomcat && \
     chmod g+x conf && \
     chown -R tomcat webapps/ work/ temp/ logs/
 
+ADD settings.xml /opt/tomcat/conf
+ADD tomcat-users.xml /opt/tomcat/conf
 CMD ["/opt/tomcat/bin/catalina.sh" , "run"]
