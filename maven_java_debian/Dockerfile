@@ -1,4 +1,4 @@
-FROM java_on_debian
+FROM java
 
 MAINTAINER karimebiz
 
@@ -12,4 +12,9 @@ RUN wget --no-verbose -O /tmp/apache-maven-3.3.9.tar.gz http://archive.apache.or
     ln -s /opt/maven/bin/mvn /usr/local/bin && \
     rm -f /tmp/apache-maven-3.3.9.tar.gz
 
-ADD computer-database /computer-database
+ADD computer-database /computer-database 
+
+WORKDIR computer-database
+
+CMD ["mvn" , "verify","test"]
+
