@@ -1,4 +1,4 @@
-FROM java
+FROM java_debian
 
 MAINTAINER kyahiaoui@e-biz.fr
 

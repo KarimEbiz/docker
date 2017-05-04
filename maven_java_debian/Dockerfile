@@ -1,4 +1,4 @@
-FROM java
+FROM java_debian
 
 MAINTAINER karimebiz
 
@@ -16,5 +16,4 @@ ADD computer-database /computer-database
 
 WORKDIR computer-database
 
-CMD ["mvn" , "verify","test"]
-
+CMD ["mvn" , "compile","test","clean" ,"package"]

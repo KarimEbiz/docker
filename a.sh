@@ -1,10 +1,10 @@
 
 
-
+docker network rm computer-database-network
 docker network create computer-database-network
 
 ################################################## MYSQL #######################################################
-docker run -it -d --name="mysqlInstance" mysql
+docker run -it -d --name="mysqlInstance" mysql_test_debian
 # TEST : 
 #	docker run -it -p 3306:3306 mysql
 #	Dans le terminal normal
@@ -15,7 +15,7 @@ docker network connect computer-database-network mysqlInstance
 
 
 ################################################## JAVA MAVEN ##################################################
-docker run -p 8080:8080 -d --name="computerDatabaseInstance" maven_java
+docker run -p 8080:8080 -d --name="computerDatabaseInstance" maven_java_debian
 # TEST : 
 #	docker run -p 8080:8080 maven_java
 
