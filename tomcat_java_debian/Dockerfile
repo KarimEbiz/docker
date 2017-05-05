@@ -16,4 +16,8 @@ RUN groupadd tomcat && \
 
 ADD settings.xml /opt/tomcat/conf
 ADD tomcat-users.xml /opt/tomcat/conf
+
+
+EXPOSE 8080 8009
+
 CMD ["/opt/tomcat/bin/catalina.sh" , "run"]

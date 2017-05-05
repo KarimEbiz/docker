@@ -34,11 +34,13 @@
 -->
 	<role rolename="admin-script"/>
 	<role rolename="admin-gui"/>
+	<role rolename="manager-script"/>
+	<role rolename="manager-jmx"/>
   	<role rolename="manager-gui"/>
   	<role rolename="manager"/>
   	<role rolename="manager-status"/>
-
- 	<user username="admin" password="admin" roles="admin-script,admin-gui,manager-gui,manager,manager-status"/>
+	<role rolename="tomcat"/>
+ 	<user username="admin" password="admin" roles="admin-script,admin-gui,manager-gui,manager,manager-status,tomcat,manager-script,manager-jmx"/>
 
 
 </tomcat-users>
