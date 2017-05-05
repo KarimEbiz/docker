@@ -2,6 +2,8 @@ FROM java_debian
 
 MAINTAINER kyahiaoui@e-biz.fr
 
+ENV CATALINA_HOME=/opt/tomcat
+
 RUN groupadd tomcat && \
     useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat && \
     cd /tmp && \
@@ -16,7 +18,7 @@ RUN groupadd tomcat && \
 
 ADD settings.xml /opt/tomcat/conf
 ADD tomcat-users.xml /opt/tomcat/conf
-
+ADD context.xml	/opt/tomcat/conf
 
 EXPOSE 8080 8009
 
